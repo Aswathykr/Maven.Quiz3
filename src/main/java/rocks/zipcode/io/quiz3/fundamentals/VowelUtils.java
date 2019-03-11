@@ -1,23 +1,48 @@
 package rocks.zipcode.io.quiz3.fundamentals;
 
+import java.util.stream.Stream;
+
 /**
  * @author leon on 09/12/2018.
  */
 public class VowelUtils {
     public static Boolean hasVowels(String word) {
-        return null;
+
+        word = word.toLowerCase();
+
+        boolean vowelFound = false;
+        for (int i = 0; i < word.length(); i++) {
+            char ch = word.charAt(i);
+            if(isVowel(ch)){
+                vowelFound = true;
+                break;
+            }
+        }
+        return vowelFound;
     }
 
     public static Integer getIndexOfFirstVowel(String word) {
-        return null;
+        word = word.toLowerCase();
+
+        Integer vowelIdx = null;
+        for (int i = 0; i < word.length(); i++) {
+            char ch = word.charAt(i);
+            if(isVowel(ch)){
+                vowelIdx = i;
+                break;
+            }
+        }
+        return vowelIdx;
     }
 
 
     public static Boolean startsWithVowel(String word) {
-        return null;
+        return isVowel(word.charAt(0));
     }
 
     public static Boolean isVowel(Character character) {
-        return null;
+        character = Character.toLowerCase(character);
+        return ( character == 'a' || character == 'e' ||
+                character == 'i' || character == 'o' || character == 'u');
     }
 }

@@ -27,7 +27,7 @@ public class IsCharacterAtIndex {
         Integer index = 0;
 
         // then
-        Assert.assertFalse(StringUtils.isCharacterAtIndex(string, character, index));
+        Assert.assertTrue(StringUtils.isCharacterAtIndex(string, character, index));
     }
 
 
@@ -50,7 +50,7 @@ public class IsCharacterAtIndex {
         Integer index = 6;
 
         // then
-        Assert.assertFalse(StringUtils.isCharacterAtIndex(string, character, index));
+        Assert.assertTrue(StringUtils.isCharacterAtIndex(string, character, index));
     }
 
 }
